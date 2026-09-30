@@ -1,0 +1,599 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url(3840x2160-magic-mint-solid-color-background.jpg) ;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #4a2c20;
+}
+
+.login-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+
+}
+.login.box {
+    width: 100%;
+    max-width: 400px;
+
+    background-color: white;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 4px 15px rgba(0,0,0,0,1);
+}
+
+.coracoes {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.coracoes span {
+    position: absolute;
+    font-size: 40px;
+    color: white;
+    animation: flutuar 4s ease-in-out infinite;
+}
+
+.coracoes span:nth-child(1) {
+    left: 10%;
+    top: 20%;
+}
+
+.coracoes span:nth-child(2) {
+    left: 80%;
+    top: 15%;
+    animation-delay: 1s;
+}
+
+.coracoes span:nth-child(3) {
+    left: 20%;
+    top: 75%;
+    animation-delay: 2s;
+}
+
+.coracoes span:nth-child(4) {
+    left: 85%;
+    top: 70%;
+    animation-delay: 0.5s;
+}
+
+.coracoes span:nth-child(5) {
+    left: 50%;
+    top: 10%;
+    animation-delay: 1.5s;
+}
+
+@keyframes flutuar {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+/* HOME */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #e8fff8;
+    color: #4a2c20;
+}
+
+
+/* CABEÇALHO */
+
+header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    padding: 20px 40px;
+
+    background-color: #b8eadc;
+}
+
+header h1 {
+    margin: 0;
+    margin-right: auto;
+}
+
+
+/* PESQUISA */
+
+header input {
+    width: 250px;
+    padding: 10px;
+
+    border: none;
+    border-radius: 20px;
+
+    outline: none;
+}
+
+
+/* BOTÕES DO CABEÇALHO */
+
+header button {
+    width: 45px;
+    height: 45px;
+
+    border: none;
+    border-radius: 50%;
+
+    background-color: white;
+
+    cursor: pointer;
+}
+
+header button:hover {
+    transform: scale(1.1);
+}
+
+
+/* PRODUTOS */
+
+main {
+    padding: 40px;
+}
+
+main h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+
+/* CARTÕES */
+
+article {
+    width: 220px;
+
+    padding: 25px;
+
+    background-color: white;
+
+    border-radius: 15px;
+
+    text-align: center;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* BOTÃO COMPRAR */
+
+article button {
+    padding: 10px 20px;
+
+    border: none;
+    border-radius: 20px;
+
+    background-color: #8b5e3c;
+    color: white;
+
+    cursor: pointer;
+}
+
+article button:hover {
+    background-color: #6f472d;
+}
+
+article {
+    transition: transform 0.3s ease;
+}
+
+article:hover {
+    transform: scale(1.05);
+}
+
+/* RODAPÉ */
+
+footer {
+    text-align: center;
+
+    padding: 20px;
+
+    margin-top: 40px;
+
+    background-color: #b8eadc;
+}
+
+article img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Página do produto */
+/* =========================================
+   PÁGINA DO PRODUTO
+   ========================================= */
+
+
+/* Fundo dos corações */
+
+.coracoes {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.coracoes span {
+    position: absolute;
+    font-size: 40px;
+    color: white;
+    animation: flutuar 4s ease-in-out infinite;
+}
+
+
+/* Posições dos corações */
+
+.coracoes span:nth-child(1) {
+    left: 10%;
+    top: 20%;
+}
+
+.coracoes span:nth-child(2) {
+    left: 80%;
+    top: 15%;
+    animation-delay: 1s;
+}
+
+.coracoes span:nth-child(3) {
+    left: 20%;
+    top: 75%;
+    animation-delay: 2s;
+}
+
+.coracoes span:nth-child(4) {
+    left: 85%;
+    top: 70%;
+    animation-delay: 0.5s;
+}
+
+.coracoes span:nth-child(5) {
+    left: 50%;
+    top: 10%;
+    animation-delay: 1.5s;
+}
+
+
+/* Movimento dos corações */
+
+@keyframes flutuar {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+}
+
+
+
+/* =========================================
+   CAIXA DO PRODUTO
+   ========================================= */
+
+.pagina-produto {
+
+    max-width: 900px;
+
+    margin: 40px auto;
+
+    padding: 40px;
+
+    background-color: white;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.1);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 50px;
+
+    flex-wrap: wrap;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* =========================================
+   IMAGEM DO PRODUTO
+   ========================================= */
+
+.produto-imagem img {
+
+    width: 300px;
+
+    height: 300px;
+
+    object-fit: cover;
+
+    border-radius: 15px;
+
+}
+
+
+/* =========================================
+   INFORMAÇÕES DO PRODUTO
+   ========================================= */
+
+.produto-info {
+
+    text-align: left;
+
+    max-width: 300px;
+
+}
+
+.produto-info h2 {
+
+    font-size: 32px;
+
+    margin-top: 0;
+
+}
+
+.preco {
+
+    font-size: 24px;
+
+    font-weight: bold;
+
+}
+
+
+/* =========================================
+   QUANTIDADE
+   ========================================= */
+
+#quantidade {
+
+    width: 60px;
+
+    padding: 8px;
+
+    margin-left: 8px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 8px;
+
+}
+
+
+/* =========================================
+   BOTÕES DO PRODUTO
+   ========================================= */
+
+.botoes-produto {
+
+    margin-top: 20px;
+
+    display: flex;
+
+    gap: 10px;
+
+    flex-wrap: wrap;
+
+}
+
+.botoes-produto button {
+
+    padding: 10px 18px;
+
+    border: none;
+
+    border-radius: 20px;
+
+    background-color: #8b5e3c;
+
+    color: white;
+
+    cursor: pointer;
+
+}
+
+.botoes-produto button:hover {
+
+    background-color: #6f472d;
+
+}
+
+
+/* =========================================
+   COMENTÁRIOS
+   ========================================= */
+
+.comentarios {
+
+    max-width: 900px;
+
+    margin: 30px auto;
+
+    padding: 30px;
+
+    background-color: white;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.1);
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+
+/* =========================================
+   NOVO COMENTÁRIO
+   ========================================= */
+
+.novo-comentario {
+
+    max-width: 900px;
+
+    margin: 30px auto;
+
+    padding: 30px;
+
+    background-color: white;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.1);
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+.novo-comentario textarea {
+
+    padding: 10px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 10px;
+
+    resize: vertical;
+
+}
+
+.novo-comentario button {
+
+    padding: 10px 20px;
+
+    border: none;
+
+    border-radius: 20px;
+
+    background-color: #8b5e3c;
+
+    color: white;
+
+    cursor: pointer;
+
+}
+
+.novo-comentario button:hover {
+
+    background-color: #6f472d;
+
+}
+.titulo-categoria {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    font-size: 32px;
+    color: #4a2c20;
+}
+
+
+.produtos-categoria {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+
+.card-categoria {
+    width: 250px;
+    padding: 25px;
+
+    background-color: white;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.1);
+
+    transition: transform 0.3s ease;
+}
+
+
+.card-categoria:hover {
+    transform: scale(1.05);
+}
+
+
+.card-categoria img {
+    width: 200px;
+    height: 200px;
+
+    object-fit: cover;
+
+    border-radius: 15px;
+}
+
+
+.card-categoria p {
+    color: #4a2c20;
+}
+
+
+.card-categoria button {
+    padding: 10px 20px;
+
+    border: none;
+
+    border-radius: 20px;
+
+    background-color: #8b5e3c;
+
+    color: white;
+
+    cursor: pointer;
+}
+
+
+.card-categoria button:hover {
+    background-color: #6f472d;
+}

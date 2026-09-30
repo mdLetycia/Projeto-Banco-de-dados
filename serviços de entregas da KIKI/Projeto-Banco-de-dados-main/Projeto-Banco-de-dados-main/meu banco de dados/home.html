@@ -1,0 +1,158 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Café com Gatinhos</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+
+    <header>
+
+        <h1>Café com Gatinhos</h1>
+
+
+        <!-- Pesquisa -->
+
+        <input
+            type="search"
+            id="pesquisa"
+            placeholder="pesquisar produtos"
+            onkeydown="if (event.key === 'Enter') pesquisarProdutos()"
+        >
+
+        <button onclick="pesquisarProdutos()">
+            🔎
+        </button>
+
+
+        <!-- Carrinho -->
+
+        <button onclick="location.href='carrinho.html'">
+            🛒
+        </button>
+
+
+        <!-- Perfil -->
+
+        <button onclick="location.href='perfil.html'">
+            👤
+        </button>
+
+    </header>
+
+
+    <!-- FUNDO COM CORAÇÕES -->
+
+    <div class="coracoes">
+
+        <span>♥</span>
+        <span>♥</span>
+        <span>♥</span>
+        <span>♥</span>
+        <span>♥</span>
+
+    </div>
+
+
+    <!-- CONTEÚDO PRINCIPAL -->
+
+    <main>
+
+        <h2>Nossos produtos</h2>
+
+
+        <section>
+
+
+            <!-- CAFÉ PRETO -->
+
+            <article class="produto">
+
+                <h3>Café Preto</h3>
+
+
+                <img
+                    src="baixados (12).jpeg"
+                    alt="Café preto"
+                >
+
+
+                <p>
+                    R$ 3,00
+                </p>
+
+
+                <button
+                    onclick="location.href='produtos/Café.html'"
+                >
+                    Comprar
+                </button>
+
+            </article>
+
+
+            <!-- CAPUCCINO -->
+
+            <article class="produto">
+
+                <h3>Capuccino</h3>
+
+
+                <img
+                    src="baixados (13).jpeg"
+                    alt="Capuccino"
+                >
+
+
+                <p>
+                    R$ 4,00
+                </p>
+
+
+                <button
+                    onclick="location.href='produtos/Capuccino.html'"
+                >
+                    Comprar
+                </button>
+
+            </article>
+
+
+        </section>
+
+    </main>
+
+
+    <!-- RODAPÉ -->
+
+    <footer>
+
+        <p>
+            Obrigada por escolher nosso café 🐈☕
+        </p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

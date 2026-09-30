@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Carrinho - Café com Gatinhos</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <header>
+
+    <button class="botao-voltar" onclick="location.href='../home.html'">
+    ← Voltar
+</button>
+        <h1>Café com Gatinhos</h1>
+
+        <input
+            type="search"
+            placeholder="pesquisar produtos"
+        >
+
+        <button>🔎</button>
+
+        <button onclick="location.href='carrinho.html'">
+            🛒
+        </button>
+
+        <button>👤</button>
+
+    </header>
+
+
+    <div class="coracoes">
+
+        <span>♥</span>
+        <span>♥</span>
+        <span>♥</span>
+        <span>♥</span>
+        <span>♥</span>
+
+    </div>
+
+
+    <main>
+
+        <section class="carrinho">
+
+            <h2>🛒 Meu carrinho</h2>
+
+            <div id="lista-carrinho"></div>
+
+            <h3 id="total">
+                Total: R$ 0,00
+            </h3>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            Obrigada por escolher nosso café 🐈☕
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

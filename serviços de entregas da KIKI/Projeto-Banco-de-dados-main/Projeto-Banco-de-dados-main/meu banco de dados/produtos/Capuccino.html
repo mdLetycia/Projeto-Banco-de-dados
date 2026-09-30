@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Capuccino - Café com Gatinhos</title>
+
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <header>
+
+        <h1>Café com Gatinhos</h1>
+
+        <input
+            type="search"
+            placeholder="pesquisar produtos"
+        >
+
+        <button>🔎</button>
+
+        <button onclick="location.href='../carrinho.html'">
+            🛒
+        </button>
+
+        <button>👤</button>
+
+    </header>
+
+      <button class="botao-voltar" onclick="location.href='../home.html'">
+    ← Voltar
+</button>
+
+    <!-- Corações do fundo -->
+
+    <div class="coracoes">
+
+        <span>♥</span>
+        <span>♥</span>
+        <span>♥</span>
+        <span>♥</span>
+        <span>♥</span>
+
+    </div>
+
+
+    <main>
+
+        <!-- Produto -->
+
+        <section class="pagina-produto">
+
+            <div class="produto-imagem">
+
+                <img
+                    src="../baixados (13).jpeg"
+                    alt="Capuccino"
+                >
+
+            </div>
+
+
+            <div class="produto-info">
+
+                <h2>Capuccino</h2>
+
+                <p>
+                    Capuccino cremoso e delicioso,
+                    preparado na hora.
+                </p>
+
+                <p class="preco">
+                    R$ 4,00
+                </p>
+
+
+                <!-- Quantidade -->
+
+                <label for="quantidade">
+                    Quantidade:
+                </label>
+
+                <input
+                    type="number"
+                    id="quantidade"
+                    value="1"
+                    min="1"
+                >
+
+
+                <!-- Botões -->
+
+                <div class="botoes-produto">
+
+                    <button
+                        onclick="adicionarCarrinho(
+                            'Capuccino',
+                            4.00,
+                            '../baixados (13).jpeg'
+                        )"
+                    >
+                        🛒 Adicionar ao carrinho
+                    </button>
+
+
+                    <button>
+                        💳 Comprar
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Comentários -->
+
+        <section class="comentarios">
+
+            <h2>⭐ Comentários</h2>
+
+        </section>
+
+
+        <!-- Novo comentário -->
+
+        <section class="novo-comentario">
+
+            <h2>Deixe seu comentário</h2>
+
+            <form>
+
+                <label for="comentario">
+                    Comentário:
+                </label>
+
+                <br>
+
+                <textarea
+                    id="comentario"
+                    rows="5"
+                    cols="40"
+                    placeholder="Escreva o que achou do produto..."
+                ></textarea>
+
+                <br><br>
+
+                <button type="submit">
+                    Enviar comentário
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            Obrigada por escolher nosso café 🐈☕
+        </p>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+
+    <script src="../script.js"></script>
+
+</body>
+
+</html>

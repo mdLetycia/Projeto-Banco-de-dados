@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Café Preto - Café com Gatinhos</title>
+
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+
+        <h1>Café com Gatinhos</h1>
+
+        <input type="search" placeholder="pesquisar produtos">
+
+        <button>🔎</button>
+        <button>🛒</button>
+        <button>👤</button>
+
+    </header>
+
+
+    <!-- Fundo com corações -->
+    <div class="coracoes">
+
+        <span>♥</span>
+        <span>♥</span>
+        <span>♥</span>
+        <span>♥</span>
+        <span>♥</span>
+
+    </div>
+
+
+    <main>
+
+        <!-- Produto -->
+        <section class="pagina-produto">
+
+            <!-- Imagem -->
+            <div class="produto-imagem">
+
+                <img
+                    src="../baixados (12).jpeg"
+                    alt="Café preto"
+                >
+
+            </div>
+
+
+            <!-- Informações -->
+            <div class="produto-info">
+
+                <h2>Café Preto</h2>
+
+                <p>
+                    Café preto tradicional, preparado na hora.
+                </p>
+
+                <p class="preco">
+                    R$ 3,00
+                </p>
+
+
+                <!-- Quantidade -->
+                <label for="quantidade">
+                    Quantidade:
+                </label>
+
+                <input
+                    type="number"
+                    id="quantidade"
+                    value="1"
+                    min="1"
+                >
+
+
+                <!-- Botões -->
+                <div class="botoes-produto">
+
+                    <button>
+                        🛒 Adicionar ao carrinho
+                    </button>
+
+                    <button>
+                        💳 Comprar
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Comentários -->
+        <section class="comentarios">
+
+            <h2>⭐ Comentários</h2>
+
+            <!--
+                Os comentários serão carregados
+                posteriormente pelo banco de dados.
+            -->
+
+        </section>
+
+
+        <!-- Formulário de comentário -->
+        <section class="novo-comentario">
+
+            <h2>Deixe seu comentário</h2>
+
+            <form>
+
+                <label for="comentario">
+                    Comentário:
+                </label>
+
+                <br>
+
+                <textarea
+                    id="comentario"
+                    rows="5"
+                    cols="40"
+                    placeholder="Escreva o que achou do produto..."
+                ></textarea>
+
+                <br><br>
+
+                <button type="submit">
+                    Enviar comentário
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <!-- Rodapé -->
+    <footer>
+
+        <p>
+            Obrigada por escolher nosso café 🐈☕
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
