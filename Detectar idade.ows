@@ -1,0 +1,324 @@
+<?xml version='1.0' encoding='utf-8'?>
+<scheme version="2.0" title="" description="">
+	<nodes>
+		<node id="0" name="Import Images" qualified_name="orangecontrib.imageanalytics.widgets.owimageimport.OWImportImages" project_name="Orange3-ImageAnalytics" version="" title="Import Images" position="(144.0, 162.0)" />
+		<node id="1" name="Image Viewer" qualified_name="orangecontrib.imageanalytics.widgets.owimageviewer.OWImageViewer" project_name="Orange3-ImageAnalytics" version="" title="Image Viewer" position="(244.0, 49.0)" />
+		<node id="2" name="Image Embedding" qualified_name="orangecontrib.imageanalytics.widgets.owimageembedding.OWImageEmbedding" project_name="Orange3-ImageAnalytics" version="" title="Image Embedding" position="(355.0, 159.0)" />
+		<node id="3" name="Logistic Regression" qualified_name="Orange.widgets.model.owlogisticregression.OWLogisticRegression" project_name="Orange3" version="" title="Logistic Regression" position="(545.0, 223.0)" />
+		<node id="4" name="Test and Score" qualified_name="Orange.widgets.evaluate.owtestandscore.OWTestAndScore" project_name="Orange3" version="" title="Test and Score" position="(738.0, 158.0)" />
+		<node id="5" name="Distributions" qualified_name="Orange.widgets.visualize.owdistributions.OWDistributions" project_name="Orange3" version="" title="Distributions" position="(277.0, 311.0)" />
+		<node id="6" name="Confusion Matrix" qualified_name="Orange.widgets.evaluate.owconfusionmatrix.OWConfusionMatrix" project_name="Orange3" version="" title="Confusion Matrix" position="(858.0, 161.0)" />
+		<node id="7" name="SVM" qualified_name="Orange.widgets.model.owsvm.OWSVM" project_name="Orange3" version="" title="SVM" position="(547.0, 341.0)" />
+		<node id="8" name="Neural Network" qualified_name="Orange.widgets.model.owneuralnetwork.OWNNLearner" project_name="Orange3" version="" title="Neural Network" position="(542.0, 49.0)" />
+		<node id="9" name="Save Model" qualified_name="Orange.widgets.model.owsavemodel.OWSaveModel" project_name="Orange3" version="" title="Save Model" position="(734.0, 345.0)" />
+		<node id="10" name="Python Script" qualified_name="Orange.widgets.data.owpythonscript.OWPythonScript" project_name="Orange3" version="" title="Python Script" position="(255.0, 545.0)" />
+		<node id="11" name="Test and Score" qualified_name="Orange.widgets.evaluate.owtestandscore.OWTestAndScore" project_name="Orange3" version="" title="teste paython" position="(700.0, 575.0)" />
+		<node id="12" name="Confusion Matrix" qualified_name="Orange.widgets.evaluate.owconfusionmatrix.OWConfusionMatrix" project_name="Orange3" version="" title="Confusion Matrix (1)" position="(850.0, 575.0)" />
+		<node id="13" name="Logistic Regression" qualified_name="Orange.widgets.model.owlogisticregression.OWLogisticRegression" project_name="Orange3" version="" title="Logistic Regression (1)" position="(455.0, 611.0)" />
+		<node id="14" name="SVM" qualified_name="Orange.widgets.model.owsvm.OWSVM" project_name="Orange3" version="" title="SVM (1)" position="(444.0, 530.0)" />
+		<node id="15" name="Neural Network" qualified_name="Orange.widgets.model.owneuralnetwork.OWNNLearner" project_name="Orange3" version="" title="Neural Network (1)" position="(416.0, 423.0)" />
+	</nodes>
+	<links>
+		<link id="0" source_node_id="0" sink_node_id="1" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="data" sink_channel_id="data" />
+		<link id="1" source_node_id="0" sink_node_id="2" source_channel="Data" sink_channel="Images" enabled="true" source_channel_id="data" sink_channel_id="images" />
+		<link id="2" source_node_id="0" sink_node_id="5" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="data" sink_channel_id="data" />
+		<link id="3" source_node_id="2" sink_node_id="3" source_channel="Embeddings" sink_channel="Data" enabled="true" source_channel_id="embeddings" sink_channel_id="data" />
+		<link id="4" source_node_id="3" sink_node_id="4" source_channel="Learner" sink_channel="Learner" enabled="true" source_channel_id="learner" sink_channel_id="learner" />
+		<link id="5" source_node_id="2" sink_node_id="4" source_channel="Embeddings" sink_channel="Data" enabled="true" source_channel_id="embeddings" sink_channel_id="train_data" />
+		<link id="6" source_node_id="2" sink_node_id="7" source_channel="Embeddings" sink_channel="Data" enabled="true" source_channel_id="embeddings" sink_channel_id="data" />
+		<link id="7" source_node_id="7" sink_node_id="4" source_channel="Learner" sink_channel="Learner" enabled="true" source_channel_id="learner" sink_channel_id="learner" />
+		<link id="8" source_node_id="2" sink_node_id="8" source_channel="Embeddings" sink_channel="Data" enabled="true" source_channel_id="embeddings" sink_channel_id="data" />
+		<link id="9" source_node_id="8" sink_node_id="4" source_channel="Learner" sink_channel="Learner" enabled="true" source_channel_id="learner" sink_channel_id="learner" />
+		<link id="10" source_node_id="4" sink_node_id="6" source_channel="Evaluation Results" sink_channel="Evaluation Results" enabled="true" source_channel_id="evaluations_results" sink_channel_id="evaluation_results" />
+		<link id="11" source_node_id="8" sink_node_id="9" source_channel="Model" sink_channel="Model" enabled="true" source_channel_id="model" sink_channel_id="model" />
+		<link id="12" source_node_id="0" sink_node_id="10" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="data" sink_channel_id="data" />
+		<link id="13" source_node_id="11" sink_node_id="12" source_channel="Evaluation Results" sink_channel="Evaluation Results" enabled="true" source_channel_id="evaluations_results" sink_channel_id="evaluation_results" />
+		<link id="14" source_node_id="13" sink_node_id="11" source_channel="Learner" sink_channel="Learner" enabled="true" source_channel_id="learner" sink_channel_id="learner" />
+		<link id="15" source_node_id="10" sink_node_id="13" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="data" sink_channel_id="data" />
+		<link id="16" source_node_id="10" sink_node_id="14" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="data" sink_channel_id="data" />
+		<link id="17" source_node_id="14" sink_node_id="11" source_channel="Learner" sink_channel="Learner" enabled="true" source_channel_id="learner" sink_channel_id="learner" />
+		<link id="18" source_node_id="10" sink_node_id="15" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="data" sink_channel_id="data" />
+		<link id="19" source_node_id="15" sink_node_id="11" source_channel="Learner" sink_channel="Learner" enabled="true" source_channel_id="learner" sink_channel_id="learner" />
+	</links>
+	<annotations />
+	<thumbnail />
+	<node_properties>
+		<properties node_id="0" format="pickle">gASVjgMAAAAAAAB9lCiMEmNvbnRyb2xBcmVhVmlzaWJsZZSIjAxyZWNlbnRfcGF0aHOUXZQojB5v
+cmFuZ2V3aWRnZXQudXRpbHMuZmlsZWRpYWxvZ3OUjApSZWNlbnRQYXRolJOUKYGUfZQojAdhYnNw
+YXRolIxKQzovVXNlcnMvQWx1bm8vRG93bmxvYWRzL1ZPVUxFTUJSQVIvQXVsYTAzL0F1bGEwMy9k
+YXRhc2V0X2FnZV9ncm91cHMvdHJhaW6UjAZwcmVmaXiUjAdiYXNlZGlylIwHcmVscGF0aJSMJkF1
+bGEwMy9BdWxhMDMvZGF0YXNldF9hZ2VfZ3JvdXBzL3RyYWlulIwFdGl0bGWUjACUjAVzaGVldJRo
+EIwLZmlsZV9mb3JtYXSUTnViaAYpgZR9lChoCYwYQzovVXNlcnMvQWx1bm8vRG93bmxvYWRzlGgL
+TmgNTmgPaBBoEWgQaBJOdWJoBimBlH2UKGgJjDpDOi9Vc2Vycy9BbHVuby9EZXNrdG9wL2RhdGFz
+ZXRfcmFpb194L2RhdGFzZXRfcmFpb194L3RyYWlulGgLTmgNTmgPaBBoEWgQaBJOdWJoBimBlH2U
+KGgJjDlDOi9Vc2Vycy9BbHVuby9EZXNrdG9wL2RhdGFzZXRfcmFpb194L2RhdGFzZXRfcmFpb194
+L3Rlc3SUaAtOaA1OaA9oEGgRaBBoEk51YmgGKYGUfZQoaAmMP0M6L1VzZXJzL0FsdW5vL0Rlc2t0
+b3AvZGF0YXNldF9yYWlvX3gvZGF0YXNldF9yYWlvX3gvdmFsaWRhdGlvbpRoC05oDU5oD2gQaBFo
+EGgSTnViaAYpgZR9lChoCYw0QzovVXNlcnMvQWx1bm8vRGVza3RvcC9kYXRhc2V0X3JhaW9feC9k
+YXRhc2V0X3JhaW9feJRoC05oDU5oD2gQaBFoEGgSTnViaAYpgZR9lChoCYw+QzovVXNlcnMvQWx1
+bm8vRG93bmxvYWRzL2RyaXZlLWRvd25sb2FkLTIwMjYwOTIxVDEyNDYxN1otMS0wMDGUaAtOaA1O
+aA9oEGgRaBBoEk51YmWME3NhdmVkV2lkZ2V0R2VvbWV0cnmUQ0IB2dDLAAMAAAAAAxkAAAGkAAAE
+ZwAAAkUAAAMaAAABwwAABGYAAAJEAAAAAAAAAAAHgAAAAxoAAAHDAAAEZgAAAkSUjAtfX3ZlcnNp
+b25fX5RLAXUu
+</properties>
+		<properties node_id="1" format="pickle">gASVlgEAAAAAAAB9lCiMCmF1dG9Db21taXSUiIwSY29udHJvbEFyZWFWaXNpYmxllIiMCWltYWdl
+U2l6ZZRNTwGME3NhdmVkV2lkZ2V0R2VvbWV0cnmUQ0IB2dDLAAMAAP/////////4AAAHgAAABAgA
+AAAAAAAAFwAAB38AAAQHAAAAAAIAAAAHgAAAAAAAAAAXAAAHfwAABAeUjAtfX3ZlcnNpb25fX5RL
+AowQY29udGV4dF9zZXR0aW5nc5RdlIwVb3Jhbmdld2lkZ2V0LnNldHRpbmdzlIwHQ29udGV4dJST
+lCmBlH2UKIwGdmFsdWVzlH2UKIwKaW1hZ2VfYXR0cpSMBWltYWdllEtnhpSMDnNlbGVjdGVkX2l0
+ZW1zlI+USv7///+GlIwKdGl0bGVfYXR0cpSMCmltYWdlIG5hbWWUS2eGlGgGSwJ1jAphdHRyaWJ1
+dGVzlH2UjAhjYXRlZ29yeZRLAXOMBW1ldGFzlH2UKGgXSwNoEUsDjARzaXpllEsCjAV3aWR0aJRL
+AowGaGVpZ2h0lEsCdXViYXUu
+</properties>
+		<properties node_id="2" format="literal">{'_auto_apply': True, 'cb_embedder_current_id': 1, 'cb_image_attr_current_id': 0, 'controlAreaVisible': True, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x03/\x00\x00\x01\x84\x00\x00\x04D\x00\x00\x02\x83\x00\x00\x030\x00\x00\x01\xa3\x00\x00\x04C\x00\x00\x02\x82\x00\x00\x00\x00\x00\x00\x00\x00\x07\x80\x00\x00\x030\x00\x00\x01\xa3\x00\x00\x04C\x00\x00\x02\x82', '__version__': 1}</properties>
+		<properties node_id="3" format="literal">{'C_index': 61, 'auto_apply': True, 'class_weight': False, 'controlAreaVisible': True, 'learner_name': '', 'penalty_type': 1, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x03T\x00\x00\x01e\x00\x00\x04+\x00\x00\x02\x85\x00\x00\x03U\x00\x00\x01\x84\x00\x00\x04*\x00\x00\x02\x84\x00\x00\x00\x00\x00\x00\x00\x00\x07\x80\x00\x00\x03U\x00\x00\x01\x84\x00\x00\x04*\x00\x00\x02\x84', '__version__': 2}</properties>
+		<properties node_id="4" format="pickle">gASVKy4AAAAAAAB9lCiMFGNvbXBhcmlzb25fY3JpdGVyaW9ulEsAjBJjb250cm9sQXJlYVZpc2li
+bGWUiIwNY3Zfc3RyYXRpZmllZJSIjAduX2ZvbGRzlEsCjAluX3JlcGVhdHOUSwOMCnJlc2FtcGxp
+bmeUSwCMBHJvcGWURz+5mZmZmZmajAtzYW1wbGVfc2l6ZZRLCYwTc2F2ZWRXaWRnZXRHZW9tZXRy
+eZRDQgHZ0MsAAwAAAAACOQAAAOsAAAVGAAAC/gAAAjoAAAEKAAAFRQAAAv0AAAAAAAAAAAeAAAAC
+OgAAAQoAAAVFAAAC/ZSMEnNodWZmbGVfc3RyYXRpZmllZJSIjAh1c2Vfcm9wZZSJjAtzY29yZV90
+YWJsZZR9lIwQc2hvd19zY29yZV9oaW50c5R9lCiMBk1vZGVsX5SIjAZUcmFpbl+UiYwFVGVzdF+U
+iYwCQ0GUiIwXUHJlY2lzaW9uUmVjYWxsRlN1cHBvcnSUiIwLVGFyZ2V0U2NvcmWUiIwJUHJlY2lz
+aW9ulIiMBlJlY2FsbJSIjAJGMZSIjANBVUOUiIwHTG9nTG9zc5SJjAtTcGVjaWZpY2l0eZSJjBdN
+YXR0aGV3c0NvcnJDb2VmZmljaWVudJSIjANNU0WUiIwEUk1TRZSIjANNQUWUiIwETUFQRZSIjAVT
+TUFQRZSIjAJSMpSIjAZDVlJNU0WUiYwPQ2x1c3RlcmluZ1Njb3JllIiMClNpbGhvdWV0dGWUiIwX
+QWRqdXN0ZWRNdXR1YWxJbmZvU2NvcmWUiHVzjAtfX3ZlcnNpb25fX5RLBIwQY29udGV4dF9zZXR0
+aW5nc5RdlIwVb3Jhbmdld2lkZ2V0LnNldHRpbmdzlIwHQ29udGV4dJSTlCmBlH2UKIwGdmFsdWVz
+lH2UKIwPY2xhc3Nfc2VsZWN0aW9ulIwhKE5vbmUsIHNob3cgYXZlcmFnZSBvdmVyIGNsYXNzZXMp
+lEr/////hpSMDGZvbGRfZmVhdHVyZZROSv7///+GlIwVZm9sZF9mZWF0dXJlX3NlbGVjdGVklIlK
+/v///4aUaA19lGgoSwR1jAphdHRyaWJ1dGVzlCiMAm4wlEsChpSMAm4xlEsChpSMAm4ylEsChpSM
+Am4zlEsChpSMAm40lEsChpSMAm41lEsChpSMAm42lEsChpSMAm43lEsChpSMAm44lEsChpSMAm45
+lEsChpSMA24xMJRLAoaUjANuMTGUSwKGlIwDbjEylEsChpSMA24xM5RLAoaUjANuMTSUSwKGlIwD
+bjE1lEsChpSMA24xNpRLAoaUjANuMTeUSwKGlIwDbjE4lEsChpSMA24xOZRLAoaUjANuMjCUSwKG
+lIwDbjIxlEsChpSMA24yMpRLAoaUjANuMjOUSwKGlIwDbjI0lEsChpSMA24yNZRLAoaUjANuMjaU
+SwKGlIwDbjI3lEsChpSMA24yOJRLAoaUjANuMjmUSwKGlIwDbjMwlEsChpSMA24zMZRLAoaUjANu
+MzKUSwKGlIwDbjMzlEsChpSMA24zNJRLAoaUjANuMzWUSwKGlIwDbjM2lEsChpSMA24zN5RLAoaU
+jANuMziUSwKGlIwDbjM5lEsChpSMA240MJRLAoaUjANuNDGUSwKGlIwDbjQylEsChpSMA240M5RL
+AoaUjANuNDSUSwKGlIwDbjQ1lEsChpSMA240NpRLAoaUjANuNDeUSwKGlIwDbjQ4lEsChpSMA240
+OZRLAoaUjANuNTCUSwKGlIwDbjUxlEsChpSMA241MpRLAoaUjANuNTOUSwKGlIwDbjU0lEsChpSM
+A241NZRLAoaUjANuNTaUSwKGlIwDbjU3lEsChpSMA241OJRLAoaUjANuNTmUSwKGlIwDbjYwlEsC
+hpSMA242MZRLAoaUjANuNjKUSwKGlIwDbjYzlEsChpSMA242NJRLAoaUjANuNjWUSwKGlIwDbjY2
+lEsChpSMA242N5RLAoaUjANuNjiUSwKGlIwDbjY5lEsChpSMA243MJRLAoaUjANuNzGUSwKGlIwD
+bjcylEsChpSMA243M5RLAoaUjANuNzSUSwKGlIwDbjc1lEsChpSMA243NpRLAoaUjANuNzeUSwKG
+lIwDbjc4lEsChpSMA243OZRLAoaUjANuODCUSwKGlIwDbjgxlEsChpSMA244MpRLAoaUjANuODOU
+SwKGlIwDbjg0lEsChpSMA244NZRLAoaUjANuODaUSwKGlIwDbjg3lEsChpSMA244OJRLAoaUjANu
+ODmUSwKGlIwDbjkwlEsChpSMA245MZRLAoaUjANuOTKUSwKGlIwDbjkzlEsChpSMA245NJRLAoaU
+jANuOTWUSwKGlIwDbjk2lEsChpSMA245N5RLAoaUjANuOTiUSwKGlIwDbjk5lEsChpSMBG4xMDCU
+SwKGlIwEbjEwMZRLAoaUjARuMTAylEsChpSMBG4xMDOUSwKGlIwEbjEwNJRLAoaUjARuMTA1lEsC
+hpSMBG4xMDaUSwKGlIwEbjEwN5RLAoaUjARuMTA4lEsChpSMBG4xMDmUSwKGlIwEbjExMJRLAoaU
+jARuMTExlEsChpSMBG4xMTKUSwKGlIwEbjExM5RLAoaUjARuMTE0lEsChpSMBG4xMTWUSwKGlIwE
+bjExNpRLAoaUjARuMTE3lEsChpSMBG4xMTiUSwKGlIwEbjExOZRLAoaUjARuMTIwlEsChpSMBG4x
+MjGUSwKGlIwEbjEyMpRLAoaUjARuMTIzlEsChpSMBG4xMjSUSwKGlIwEbjEyNZRLAoaUjARuMTI2
+lEsChpSMBG4xMjeUSwKGlIwEbjEyOJRLAoaUjARuMTI5lEsChpSMBG4xMzCUSwKGlIwEbjEzMZRL
+AoaUjARuMTMylEsChpSMBG4xMzOUSwKGlIwEbjEzNJRLAoaUjARuMTM1lEsChpSMBG4xMzaUSwKG
+lIwEbjEzN5RLAoaUjARuMTM4lEsChpSMBG4xMzmUSwKGlIwEbjE0MJRLAoaUjARuMTQxlEsChpSM
+BG4xNDKUSwKGlIwEbjE0M5RLAoaUjARuMTQ0lEsChpSMBG4xNDWUSwKGlIwEbjE0NpRLAoaUjARu
+MTQ3lEsChpSMBG4xNDiUSwKGlIwEbjE0OZRLAoaUjARuMTUwlEsChpSMBG4xNTGUSwKGlIwEbjE1
+MpRLAoaUjARuMTUzlEsChpSMBG4xNTSUSwKGlIwEbjE1NZRLAoaUjARuMTU2lEsChpSMBG4xNTeU
+SwKGlIwEbjE1OJRLAoaUjARuMTU5lEsChpSMBG4xNjCUSwKGlIwEbjE2MZRLAoaUjARuMTYylEsC
+hpSMBG4xNjOUSwKGlIwEbjE2NJRLAoaUjARuMTY1lEsChpSMBG4xNjaUSwKGlIwEbjE2N5RLAoaU
+jARuMTY4lEsChpSMBG4xNjmUSwKGlIwEbjE3MJRLAoaUjARuMTcxlEsChpSMBG4xNzKUSwKGlIwE
+bjE3M5RLAoaUjARuMTc0lEsChpSMBG4xNzWUSwKGlIwEbjE3NpRLAoaUjARuMTc3lEsChpSMBG4x
+NziUSwKGlIwEbjE3OZRLAoaUjARuMTgwlEsChpSMBG4xODGUSwKGlIwEbjE4MpRLAoaUjARuMTgz
+lEsChpSMBG4xODSUSwKGlIwEbjE4NZRLAoaUjARuMTg2lEsChpSMBG4xODeUSwKGlIwEbjE4OJRL
+AoaUjARuMTg5lEsChpSMBG4xOTCUSwKGlIwEbjE5MZRLAoaUjARuMTkylEsChpSMBG4xOTOUSwKG
+lIwEbjE5NJRLAoaUjARuMTk1lEsChpSMBG4xOTaUSwKGlIwEbjE5N5RLAoaUjARuMTk4lEsChpSM
+BG4xOTmUSwKGlIwEbjIwMJRLAoaUjARuMjAxlEsChpSMBG4yMDKUSwKGlIwEbjIwM5RLAoaUjARu
+MjA0lEsChpSMBG4yMDWUSwKGlIwEbjIwNpRLAoaUjARuMjA3lEsChpSMBG4yMDiUSwKGlIwEbjIw
+OZRLAoaUjARuMjEwlEsChpSMBG4yMTGUSwKGlIwEbjIxMpRLAoaUjARuMjEzlEsChpSMBG4yMTSU
+SwKGlIwEbjIxNZRLAoaUjARuMjE2lEsChpSMBG4yMTeUSwKGlIwEbjIxOJRLAoaUjARuMjE5lEsC
+hpSMBG4yMjCUSwKGlIwEbjIyMZRLAoaUjARuMjIylEsChpSMBG4yMjOUSwKGlIwEbjIyNJRLAoaU
+jARuMjI1lEsChpSMBG4yMjaUSwKGlIwEbjIyN5RLAoaUjARuMjI4lEsChpSMBG4yMjmUSwKGlIwE
+bjIzMJRLAoaUjARuMjMxlEsChpSMBG4yMzKUSwKGlIwEbjIzM5RLAoaUjARuMjM0lEsChpSMBG4y
+MzWUSwKGlIwEbjIzNpRLAoaUjARuMjM3lEsChpSMBG4yMziUSwKGlIwEbjIzOZRLAoaUjARuMjQw
+lEsChpSMBG4yNDGUSwKGlIwEbjI0MpRLAoaUjARuMjQzlEsChpSMBG4yNDSUSwKGlIwEbjI0NZRL
+AoaUjARuMjQ2lEsChpSMBG4yNDeUSwKGlIwEbjI0OJRLAoaUjARuMjQ5lEsChpSMBG4yNTCUSwKG
+lIwEbjI1MZRLAoaUjARuMjUylEsChpSMBG4yNTOUSwKGlIwEbjI1NJRLAoaUjARuMjU1lEsChpSM
+BG4yNTaUSwKGlIwEbjI1N5RLAoaUjARuMjU4lEsChpSMBG4yNTmUSwKGlIwEbjI2MJRLAoaUjARu
+MjYxlEsChpSMBG4yNjKUSwKGlIwEbjI2M5RLAoaUjARuMjY0lEsChpSMBG4yNjWUSwKGlIwEbjI2
+NpRLAoaUjARuMjY3lEsChpSMBG4yNjiUSwKGlIwEbjI2OZRLAoaUjARuMjcwlEsChpSMBG4yNzGU
+SwKGlIwEbjI3MpRLAoaUjARuMjczlEsChpSMBG4yNzSUSwKGlIwEbjI3NZRLAoaUjARuMjc2lEsC
+hpSMBG4yNzeUSwKGlIwEbjI3OJRLAoaUjARuMjc5lEsChpSMBG4yODCUSwKGlIwEbjI4MZRLAoaU
+jARuMjgylEsChpSMBG4yODOUSwKGlIwEbjI4NJRLAoaUjARuMjg1lEsChpSMBG4yODaUSwKGlIwE
+bjI4N5RLAoaUjARuMjg4lEsChpSMBG4yODmUSwKGlIwEbjI5MJRLAoaUjARuMjkxlEsChpSMBG4y
+OTKUSwKGlIwEbjI5M5RLAoaUjARuMjk0lEsChpSMBG4yOTWUSwKGlIwEbjI5NpRLAoaUjARuMjk3
+lEsChpSMBG4yOTiUSwKGlIwEbjI5OZRLAoaUjARuMzAwlEsChpSMBG4zMDGUSwKGlIwEbjMwMpRL
+AoaUjARuMzAzlEsChpSMBG4zMDSUSwKGlIwEbjMwNZRLAoaUjARuMzA2lEsChpSMBG4zMDeUSwKG
+lIwEbjMwOJRLAoaUjARuMzA5lEsChpSMBG4zMTCUSwKGlIwEbjMxMZRLAoaUjARuMzEylEsChpSM
+BG4zMTOUSwKGlIwEbjMxNJRLAoaUjARuMzE1lEsChpSMBG4zMTaUSwKGlIwEbjMxN5RLAoaUjARu
+MzE4lEsChpSMBG4zMTmUSwKGlIwEbjMyMJRLAoaUjARuMzIxlEsChpSMBG4zMjKUSwKGlIwEbjMy
+M5RLAoaUjARuMzI0lEsChpSMBG4zMjWUSwKGlIwEbjMyNpRLAoaUjARuMzI3lEsChpSMBG4zMjiU
+SwKGlIwEbjMyOZRLAoaUjARuMzMwlEsChpSMBG4zMzGUSwKGlIwEbjMzMpRLAoaUjARuMzMzlEsC
+hpSMBG4zMzSUSwKGlIwEbjMzNZRLAoaUjARuMzM2lEsChpSMBG4zMzeUSwKGlIwEbjMzOJRLAoaU
+jARuMzM5lEsChpSMBG4zNDCUSwKGlIwEbjM0MZRLAoaUjARuMzQylEsChpSMBG4zNDOUSwKGlIwE
+bjM0NJRLAoaUjARuMzQ1lEsChpSMBG4zNDaUSwKGlIwEbjM0N5RLAoaUjARuMzQ4lEsChpSMBG4z
+NDmUSwKGlIwEbjM1MJRLAoaUjARuMzUxlEsChpSMBG4zNTKUSwKGlIwEbjM1M5RLAoaUjARuMzU0
+lEsChpSMBG4zNTWUSwKGlIwEbjM1NpRLAoaUjARuMzU3lEsChpSMBG4zNTiUSwKGlIwEbjM1OZRL
+AoaUjARuMzYwlEsChpSMBG4zNjGUSwKGlIwEbjM2MpRLAoaUjARuMzYzlEsChpSMBG4zNjSUSwKG
+lIwEbjM2NZRLAoaUjARuMzY2lEsChpSMBG4zNjeUSwKGlIwEbjM2OJRLAoaUjARuMzY5lEsChpSM
+BG4zNzCUSwKGlIwEbjM3MZRLAoaUjARuMzcylEsChpSMBG4zNzOUSwKGlIwEbjM3NJRLAoaUjARu
+Mzc1lEsChpSMBG4zNzaUSwKGlIwEbjM3N5RLAoaUjARuMzc4lEsChpSMBG4zNzmUSwKGlIwEbjM4
+MJRLAoaUjARuMzgxlEsChpSMBG4zODKUSwKGlIwEbjM4M5RLAoaUjARuMzg0lEsChpSMBG4zODWU
+SwKGlIwEbjM4NpRLAoaUjARuMzg3lEsChpSMBG4zODiUSwKGlIwEbjM4OZRLAoaUjARuMzkwlEsC
+hpSMBG4zOTGUSwKGlIwEbjM5MpRLAoaUjARuMzkzlEsChpSMBG4zOTSUSwKGlIwEbjM5NZRLAoaU
+jARuMzk2lEsChpSMBG4zOTeUSwKGlIwEbjM5OJRLAoaUjARuMzk5lEsChpSMBG40MDCUSwKGlIwE
+bjQwMZRLAoaUjARuNDAylEsChpSMBG40MDOUSwKGlIwEbjQwNJRLAoaUjARuNDA1lEsChpSMBG40
+MDaUSwKGlIwEbjQwN5RLAoaUjARuNDA4lEsChpSMBG40MDmUSwKGlIwEbjQxMJRLAoaUjARuNDEx
+lEsChpSMBG40MTKUSwKGlIwEbjQxM5RLAoaUjARuNDE0lEsChpSMBG40MTWUSwKGlIwEbjQxNpRL
+AoaUjARuNDE3lEsChpSMBG40MTiUSwKGlIwEbjQxOZRLAoaUjARuNDIwlEsChpSMBG40MjGUSwKG
+lIwEbjQyMpRLAoaUjARuNDIzlEsChpSMBG40MjSUSwKGlIwEbjQyNZRLAoaUjARuNDI2lEsChpSM
+BG40MjeUSwKGlIwEbjQyOJRLAoaUjARuNDI5lEsChpSMBG40MzCUSwKGlIwEbjQzMZRLAoaUjARu
+NDMylEsChpSMBG40MzOUSwKGlIwEbjQzNJRLAoaUjARuNDM1lEsChpSMBG40MzaUSwKGlIwEbjQz
+N5RLAoaUjARuNDM4lEsChpSMBG40MzmUSwKGlIwEbjQ0MJRLAoaUjARuNDQxlEsChpSMBG40NDKU
+SwKGlIwEbjQ0M5RLAoaUjARuNDQ0lEsChpSMBG40NDWUSwKGlIwEbjQ0NpRLAoaUjARuNDQ3lEsC
+hpSMBG40NDiUSwKGlIwEbjQ0OZRLAoaUjARuNDUwlEsChpSMBG40NTGUSwKGlIwEbjQ1MpRLAoaU
+jARuNDUzlEsChpSMBG40NTSUSwKGlIwEbjQ1NZRLAoaUjARuNDU2lEsChpSMBG40NTeUSwKGlIwE
+bjQ1OJRLAoaUjARuNDU5lEsChpSMBG40NjCUSwKGlIwEbjQ2MZRLAoaUjARuNDYylEsChpSMBG40
+NjOUSwKGlIwEbjQ2NJRLAoaUjARuNDY1lEsChpSMBG40NjaUSwKGlIwEbjQ2N5RLAoaUjARuNDY4
+lEsChpSMBG40NjmUSwKGlIwEbjQ3MJRLAoaUjARuNDcxlEsChpSMBG40NzKUSwKGlIwEbjQ3M5RL
+AoaUjARuNDc0lEsChpSMBG40NzWUSwKGlIwEbjQ3NpRLAoaUjARuNDc3lEsChpSMBG40NziUSwKG
+lIwEbjQ3OZRLAoaUjARuNDgwlEsChpSMBG40ODGUSwKGlIwEbjQ4MpRLAoaUjARuNDgzlEsChpSM
+BG40ODSUSwKGlIwEbjQ4NZRLAoaUjARuNDg2lEsChpSMBG40ODeUSwKGlIwEbjQ4OJRLAoaUjARu
+NDg5lEsChpSMBG40OTCUSwKGlIwEbjQ5MZRLAoaUjARuNDkylEsChpSMBG40OTOUSwKGlIwEbjQ5
+NJRLAoaUjARuNDk1lEsChpSMBG40OTaUSwKGlIwEbjQ5N5RLAoaUjARuNDk4lEsChpSMBG40OTmU
+SwKGlIwEbjUwMJRLAoaUjARuNTAxlEsChpSMBG41MDKUSwKGlIwEbjUwM5RLAoaUjARuNTA0lEsC
+hpSMBG41MDWUSwKGlIwEbjUwNpRLAoaUjARuNTA3lEsChpSMBG41MDiUSwKGlIwEbjUwOZRLAoaU
+jARuNTEwlEsChpSMBG41MTGUSwKGlIwEbjUxMpRLAoaUjARuNTEzlEsChpSMBG41MTSUSwKGlIwE
+bjUxNZRLAoaUjARuNTE2lEsChpSMBG41MTeUSwKGlIwEbjUxOJRLAoaUjARuNTE5lEsChpSMBG41
+MjCUSwKGlIwEbjUyMZRLAoaUjARuNTIylEsChpSMBG41MjOUSwKGlIwEbjUyNJRLAoaUjARuNTI1
+lEsChpSMBG41MjaUSwKGlIwEbjUyN5RLAoaUjARuNTI4lEsChpSMBG41MjmUSwKGlIwEbjUzMJRL
+AoaUjARuNTMxlEsChpSMBG41MzKUSwKGlIwEbjUzM5RLAoaUjARuNTM0lEsChpSMBG41MzWUSwKG
+lIwEbjUzNpRLAoaUjARuNTM3lEsChpSMBG41MziUSwKGlIwEbjUzOZRLAoaUjARuNTQwlEsChpSM
+BG41NDGUSwKGlIwEbjU0MpRLAoaUjARuNTQzlEsChpSMBG41NDSUSwKGlIwEbjU0NZRLAoaUjARu
+NTQ2lEsChpSMBG41NDeUSwKGlIwEbjU0OJRLAoaUjARuNTQ5lEsChpSMBG41NTCUSwKGlIwEbjU1
+MZRLAoaUjARuNTUylEsChpSMBG41NTOUSwKGlIwEbjU1NJRLAoaUjARuNTU1lEsChpSMBG41NTaU
+SwKGlIwEbjU1N5RLAoaUjARuNTU4lEsChpSMBG41NTmUSwKGlIwEbjU2MJRLAoaUjARuNTYxlEsC
+hpSMBG41NjKUSwKGlIwEbjU2M5RLAoaUjARuNTY0lEsChpSMBG41NjWUSwKGlIwEbjU2NpRLAoaU
+jARuNTY3lEsChpSMBG41NjiUSwKGlIwEbjU2OZRLAoaUjARuNTcwlEsChpSMBG41NzGUSwKGlIwE
+bjU3MpRLAoaUjARuNTczlEsChpSMBG41NzSUSwKGlIwEbjU3NZRLAoaUjARuNTc2lEsChpSMBG41
+NzeUSwKGlIwEbjU3OJRLAoaUjARuNTc5lEsChpSMBG41ODCUSwKGlIwEbjU4MZRLAoaUjARuNTgy
+lEsChpSMBG41ODOUSwKGlIwEbjU4NJRLAoaUjARuNTg1lEsChpSMBG41ODaUSwKGlIwEbjU4N5RL
+AoaUjARuNTg4lEsChpSMBG41ODmUSwKGlIwEbjU5MJRLAoaUjARuNTkxlEsChpSMBG41OTKUSwKG
+lIwEbjU5M5RLAoaUjARuNTk0lEsChpSMBG41OTWUSwKGlIwEbjU5NpRLAoaUjARuNTk3lEsChpSM
+BG41OTiUSwKGlIwEbjU5OZRLAoaUjARuNjAwlEsChpSMBG42MDGUSwKGlIwEbjYwMpRLAoaUjARu
+NjAzlEsChpSMBG42MDSUSwKGlIwEbjYwNZRLAoaUjARuNjA2lEsChpSMBG42MDeUSwKGlIwEbjYw
+OJRLAoaUjARuNjA5lEsChpSMBG42MTCUSwKGlIwEbjYxMZRLAoaUjARuNjEylEsChpSMBG42MTOU
+SwKGlIwEbjYxNJRLAoaUjARuNjE1lEsChpSMBG42MTaUSwKGlIwEbjYxN5RLAoaUjARuNjE4lEsC
+hpSMBG42MTmUSwKGlIwEbjYyMJRLAoaUjARuNjIxlEsChpSMBG42MjKUSwKGlIwEbjYyM5RLAoaU
+jARuNjI0lEsChpSMBG42MjWUSwKGlIwEbjYyNpRLAoaUjARuNjI3lEsChpSMBG42MjiUSwKGlIwE
+bjYyOZRLAoaUjARuNjMwlEsChpSMBG42MzGUSwKGlIwEbjYzMpRLAoaUjARuNjMzlEsChpSMBG42
+MzSUSwKGlIwEbjYzNZRLAoaUjARuNjM2lEsChpSMBG42MzeUSwKGlIwEbjYzOJRLAoaUjARuNjM5
+lEsChpSMBG42NDCUSwKGlIwEbjY0MZRLAoaUjARuNjQylEsChpSMBG42NDOUSwKGlIwEbjY0NJRL
+AoaUjARuNjQ1lEsChpSMBG42NDaUSwKGlIwEbjY0N5RLAoaUjARuNjQ4lEsChpSMBG42NDmUSwKG
+lIwEbjY1MJRLAoaUjARuNjUxlEsChpSMBG42NTKUSwKGlIwEbjY1M5RLAoaUjARuNjU0lEsChpSM
+BG42NTWUSwKGlIwEbjY1NpRLAoaUjARuNjU3lEsChpSMBG42NTiUSwKGlIwEbjY1OZRLAoaUjARu
+NjYwlEsChpSMBG42NjGUSwKGlIwEbjY2MpRLAoaUjARuNjYzlEsChpSMBG42NjSUSwKGlIwEbjY2
+NZRLAoaUjARuNjY2lEsChpSMBG42NjeUSwKGlIwEbjY2OJRLAoaUjARuNjY5lEsChpSMBG42NzCU
+SwKGlIwEbjY3MZRLAoaUjARuNjcylEsChpSMBG42NzOUSwKGlIwEbjY3NJRLAoaUjARuNjc1lEsC
+hpSMBG42NzaUSwKGlIwEbjY3N5RLAoaUjARuNjc4lEsChpSMBG42NzmUSwKGlIwEbjY4MJRLAoaU
+jARuNjgxlEsChpSMBG42ODKUSwKGlIwEbjY4M5RLAoaUjARuNjg0lEsChpSMBG42ODWUSwKGlIwE
+bjY4NpRLAoaUjARuNjg3lEsChpSMBG42ODiUSwKGlIwEbjY4OZRLAoaUjARuNjkwlEsChpSMBG42
+OTGUSwKGlIwEbjY5MpRLAoaUjARuNjkzlEsChpSMBG42OTSUSwKGlIwEbjY5NZRLAoaUjARuNjk2
+lEsChpSMBG42OTeUSwKGlIwEbjY5OJRLAoaUjARuNjk5lEsChpSMBG43MDCUSwKGlIwEbjcwMZRL
+AoaUjARuNzAylEsChpSMBG43MDOUSwKGlIwEbjcwNJRLAoaUjARuNzA1lEsChpSMBG43MDaUSwKG
+lIwEbjcwN5RLAoaUjARuNzA4lEsChpSMBG43MDmUSwKGlIwEbjcxMJRLAoaUjARuNzExlEsChpSM
+BG43MTKUSwKGlIwEbjcxM5RLAoaUjARuNzE0lEsChpSMBG43MTWUSwKGlIwEbjcxNpRLAoaUjARu
+NzE3lEsChpSMBG43MTiUSwKGlIwEbjcxOZRLAoaUjARuNzIwlEsChpSMBG43MjGUSwKGlIwEbjcy
+MpRLAoaUjARuNzIzlEsChpSMBG43MjSUSwKGlIwEbjcyNZRLAoaUjARuNzI2lEsChpSMBG43MjeU
+SwKGlIwEbjcyOJRLAoaUjARuNzI5lEsChpSMBG43MzCUSwKGlIwEbjczMZRLAoaUjARuNzMylEsC
+hpSMBG43MzOUSwKGlIwEbjczNJRLAoaUjARuNzM1lEsChpSMBG43MzaUSwKGlIwEbjczN5RLAoaU
+jARuNzM4lEsChpSMBG43MzmUSwKGlIwEbjc0MJRLAoaUjARuNzQxlEsChpSMBG43NDKUSwKGlIwE
+bjc0M5RLAoaUjARuNzQ0lEsChpSMBG43NDWUSwKGlIwEbjc0NpRLAoaUjARuNzQ3lEsChpSMBG43
+NDiUSwKGlIwEbjc0OZRLAoaUjARuNzUwlEsChpSMBG43NTGUSwKGlIwEbjc1MpRLAoaUjARuNzUz
+lEsChpSMBG43NTSUSwKGlIwEbjc1NZRLAoaUjARuNzU2lEsChpSMBG43NTeUSwKGlIwEbjc1OJRL
+AoaUjARuNzU5lEsChpSMBG43NjCUSwKGlIwEbjc2MZRLAoaUjARuNzYylEsChpSMBG43NjOUSwKG
+lIwEbjc2NJRLAoaUjARuNzY1lEsChpSMBG43NjaUSwKGlIwEbjc2N5RLAoaUjARuNzY4lEsChpSM
+BG43NjmUSwKGlIwEbjc3MJRLAoaUjARuNzcxlEsChpSMBG43NzKUSwKGlIwEbjc3M5RLAoaUjARu
+Nzc0lEsChpSMBG43NzWUSwKGlIwEbjc3NpRLAoaUjARuNzc3lEsChpSMBG43NziUSwKGlIwEbjc3
+OZRLAoaUjARuNzgwlEsChpSMBG43ODGUSwKGlIwEbjc4MpRLAoaUjARuNzgzlEsChpSMBG43ODSU
+SwKGlIwEbjc4NZRLAoaUjARuNzg2lEsChpSMBG43ODeUSwKGlIwEbjc4OJRLAoaUjARuNzg5lEsC
+hpSMBG43OTCUSwKGlIwEbjc5MZRLAoaUjARuNzkylEsChpSMBG43OTOUSwKGlIwEbjc5NJRLAoaU
+jARuNzk1lEsChpSMBG43OTaUSwKGlIwEbjc5N5RLAoaUjARuNzk4lEsChpSMBG43OTmUSwKGlIwE
+bjgwMJRLAoaUjARuODAxlEsChpSMBG44MDKUSwKGlIwEbjgwM5RLAoaUjARuODA0lEsChpSMBG44
+MDWUSwKGlIwEbjgwNpRLAoaUjARuODA3lEsChpSMBG44MDiUSwKGlIwEbjgwOZRLAoaUjARuODEw
+lEsChpSMBG44MTGUSwKGlIwEbjgxMpRLAoaUjARuODEzlEsChpSMBG44MTSUSwKGlIwEbjgxNZRL
+AoaUjARuODE2lEsChpSMBG44MTeUSwKGlIwEbjgxOJRLAoaUjARuODE5lEsChpSMBG44MjCUSwKG
+lIwEbjgyMZRLAoaUjARuODIylEsChpSMBG44MjOUSwKGlIwEbjgyNJRLAoaUjARuODI1lEsChpSM
+BG44MjaUSwKGlIwEbjgyN5RLAoaUjARuODI4lEsChpSMBG44MjmUSwKGlIwEbjgzMJRLAoaUjARu
+ODMxlEsChpSMBG44MzKUSwKGlIwEbjgzM5RLAoaUjARuODM0lEsChpSMBG44MzWUSwKGlIwEbjgz
+NpRLAoaUjARuODM3lEsChpSMBG44MziUSwKGlIwEbjgzOZRLAoaUjARuODQwlEsChpSMBG44NDGU
+SwKGlIwEbjg0MpRLAoaUjARuODQzlEsChpSMBG44NDSUSwKGlIwEbjg0NZRLAoaUjARuODQ2lEsC
+hpSMBG44NDeUSwKGlIwEbjg0OJRLAoaUjARuODQ5lEsChpSMBG44NTCUSwKGlIwEbjg1MZRLAoaU
+jARuODUylEsChpSMBG44NTOUSwKGlIwEbjg1NJRLAoaUjARuODU1lEsChpSMBG44NTaUSwKGlIwE
+bjg1N5RLAoaUjARuODU4lEsChpSMBG44NTmUSwKGlIwEbjg2MJRLAoaUjARuODYxlEsChpSMBG44
+NjKUSwKGlIwEbjg2M5RLAoaUjARuODY0lEsChpSMBG44NjWUSwKGlIwEbjg2NpRLAoaUjARuODY3
+lEsChpSMBG44NjiUSwKGlIwEbjg2OZRLAoaUjARuODcwlEsChpSMBG44NzGUSwKGlIwEbjg3MpRL
+AoaUjARuODczlEsChpSMBG44NzSUSwKGlIwEbjg3NZRLAoaUjARuODc2lEsChpSMBG44NzeUSwKG
+lIwEbjg3OJRLAoaUjARuODc5lEsChpSMBG44ODCUSwKGlIwEbjg4MZRLAoaUjARuODgylEsChpSM
+BG44ODOUSwKGlIwEbjg4NJRLAoaUjARuODg1lEsChpSMBG44ODaUSwKGlIwEbjg4N5RLAoaUjARu
+ODg4lEsChpSMBG44ODmUSwKGlIwEbjg5MJRLAoaUjARuODkxlEsChpSMBG44OTKUSwKGlIwEbjg5
+M5RLAoaUjARuODk0lEsChpSMBG44OTWUSwKGlIwEbjg5NpRLAoaUjARuODk3lEsChpSMBG44OTiU
+SwKGlIwEbjg5OZRLAoaUjARuOTAwlEsChpSMBG45MDGUSwKGlIwEbjkwMpRLAoaUjARuOTAzlEsC
+hpSMBG45MDSUSwKGlIwEbjkwNZRLAoaUjARuOTA2lEsChpSMBG45MDeUSwKGlIwEbjkwOJRLAoaU
+jARuOTA5lEsChpSMBG45MTCUSwKGlIwEbjkxMZRLAoaUjARuOTEylEsChpSMBG45MTOUSwKGlIwE
+bjkxNJRLAoaUjARuOTE1lEsChpSMBG45MTaUSwKGlIwEbjkxN5RLAoaUjARuOTE4lEsChpSMBG45
+MTmUSwKGlIwEbjkyMJRLAoaUjARuOTIxlEsChpSMBG45MjKUSwKGlIwEbjkyM5RLAoaUjARuOTI0
+lEsChpSMBG45MjWUSwKGlIwEbjkyNpRLAoaUjARuOTI3lEsChpSMBG45MjiUSwKGlIwEbjkyOZRL
+AoaUjARuOTMwlEsChpSMBG45MzGUSwKGlIwEbjkzMpRLAoaUjARuOTMzlEsChpSMBG45MzSUSwKG
+lIwEbjkzNZRLAoaUjARuOTM2lEsChpSMBG45MzeUSwKGlIwEbjkzOJRLAoaUjARuOTM5lEsChpSM
+BG45NDCUSwKGlIwEbjk0MZRLAoaUjARuOTQylEsChpSMBG45NDOUSwKGlIwEbjk0NJRLAoaUjARu
+OTQ1lEsChpSMBG45NDaUSwKGlIwEbjk0N5RLAoaUjARuOTQ4lEsChpSMBG45NDmUSwKGlIwEbjk1
+MJRLAoaUjARuOTUxlEsChpSMBG45NTKUSwKGlIwEbjk1M5RLAoaUjARuOTU0lEsChpSMBG45NTWU
+SwKGlIwEbjk1NpRLAoaUjARuOTU3lEsChpSMBG45NTiUSwKGlIwEbjk1OZRLAoaUjARuOTYwlEsC
+hpSMBG45NjGUSwKGlIwEbjk2MpRLAoaUjARuOTYzlEsChpSMBG45NjSUSwKGlIwEbjk2NZRLAoaU
+jARuOTY2lEsChpSMBG45NjeUSwKGlIwEbjk2OJRLAoaUjARuOTY5lEsChpSMBG45NzCUSwKGlIwE
+bjk3MZRLAoaUjARuOTcylEsChpSMBG45NzOUSwKGlIwEbjk3NJRLAoaUjARuOTc1lEsChpSMBG45
+NzaUSwKGlIwEbjk3N5RLAoaUjARuOTc4lEsChpSMBG45NzmUSwKGlIwEbjk4MJRLAoaUjARuOTgx
+lEsChpSMBG45ODKUSwKGlIwEbjk4M5RLAoaUjARuOTg0lEsChpSMBG45ODWUSwKGlIwEbjk4NpRL
+AoaUjARuOTg3lEsChpSMBG45ODiUSwKGlIwEbjk4OZRLAoaUjARuOTkwlEsChpSMBG45OTGUSwKG
+lIwEbjk5MpRLAoaUjARuOTkzlEsChpSMBG45OTSUSwKGlIwEbjk5NZRLAoaUjARuOTk2lEsChpSM
+BG45OTeUSwKGlIwEbjk5OJRLAoaUjARuOTk5lEsChpR0lIwFbWV0YXOUKIwKaW1hZ2UgbmFtZZRL
+A4aUjAVpbWFnZZRLA4aUjARzaXpllEsChpSMBXdpZHRolEsChpSMBmhlaWdodJRLAoaUdJSMCmNs
+YXNzX3ZhcnOUjAhjYXRlZ29yeZRLAYaUhZR1YmF1Lg==
+</properties>
+		<properties node_id="5" format="pickle">gASVDwIAAAAAAAB9lCiMCmF1dG9fYXBwbHmUiIwSY29udHJvbEFyZWFWaXNpYmxllIiMEGN1bXVs
+YXRpdmVfZGlzdHKUiYwTZml0dGVkX2Rpc3RyaWJ1dGlvbpRLAIwJaGlkZV9iYXJzlImMDWtkZV9z
+bW9vdGhpbmeUSwqME3NhdmVkV2lkZ2V0R2VvbWV0cnmUQ0IB2dDLAAMAAAAAAfUAAADJAAAFigAA
+AyAAAAH2AAAA6AAABYkAAAMfAAAAAAAAAAAHgAAAAfYAAADoAAAFiQAAAx+UjApzaG93X3Byb2Jz
+lImMDHNvcnRfYnlfZnJlcZSJjA9zdGFja2VkX2NvbHVtbnOUiYwLX192ZXJzaW9uX1+USwKMEGNv
+bnRleHRfc2V0dGluZ3OUXZSMFW9yYW5nZXdpZGdldC5zZXR0aW5nc5SMB0NvbnRleHSUk5QpgZR9
+lCiMBnZhbHVlc5R9lCiMBGN2YXKUjAhjYXRlZ29yeZRLZYaUjA5udW1iZXJfb2ZfYmluc5RLAEr+
+////hpSMDXNlbGVjdGVkX2JhcnOUj5RK/v///4aUjAN2YXKUaBdLZYaUaAxLAnWMCmF0dHJpYnV0
+ZXOUfZRoF0sBc4wFbWV0YXOUfZQojAppbWFnZSBuYW1llEsDjAVpbWFnZZRLA4wEc2l6ZZRLAowF
+d2lkdGiUSwKMBmhlaWdodJRLAnV1YmF1Lg==
+</properties>
+		<properties node_id="6" format="pickle">gASVwwEAAAAAAAB9lCiMEmFwcGVuZF9wcmVkaWN0aW9uc5SIjBRhcHBlbmRfcHJvYmFiaWxpdGll
+c5SJjAphdXRvY29tbWl0lIiMEmNvbnRyb2xBcmVhVmlzaWJsZZSIjBNzYXZlZFdpZGdldEdlb21l
+dHJ5lENCAdnQywADAAAAAAJIAAABOwAABTcAAAKuAAACSQAAAVoAAAU2AAACrQAAAAAAAAAAB4AA
+AAJJAAABWgAABTYAAAKtlIwQc2VsZWN0ZWRfbGVhcm5lcpSMB2NvcHlyZWeUjA5fcmVjb25zdHJ1
+Y3RvcpSTlIwIYnVpbHRpbnOUjARsaXN0lJOUaA0ph5RSlEsCYYwRc2VsZWN0ZWRfcXVhbnRpdHmU
+SwCMC19fdmVyc2lvbl9flEsBjBBjb250ZXh0X3NldHRpbmdzlF2UjBVvcmFuZ2V3aWRnZXQuc2V0
+dGluZ3OUjAdDb250ZXh0lJOUKYGUfZQojAZ2YWx1ZXOUfZQojAlzZWxlY3Rpb26Uj5QoSwRLAIaU
+kGgRSwF1jAdjbGFzc2VzlCiMBDEtMTCUjAUxMS0yMJSMBTIxLTMwlIwFMzEtNDCUjAU0MS01MJR0
+lHViYXUu
+</properties>
+		<properties node_id="7" format="literal">{'C': 1.0, 'auto_apply': True, 'coef0': 1.0, 'controlAreaVisible': True, 'degree': 3, 'epsilon': 0.1, 'gamma': 0.0, 'kernel_type': 2, 'learner_name': '', 'limit_iter': True, 'max_iter': 100, 'nu': 0.5, 'nu_C': 1.0, 'savedWidgetGeometry': None, 'svm_type': 0, 'tol': 0.001, '__version__': 2}</properties>
+		<properties node_id="8" format="literal">{'activation_index': 3, 'alpha_index': 1, 'auto_apply': True, 'controlAreaVisible': True, 'hidden_layers_input': '100,', 'learner_name': '', 'max_iterations': 200, 'replicable': True, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x03(\x00\x00\x01V\x00\x00\x04X\x00\x00\x02\x93\x00\x00\x03)\x00\x00\x01u\x00\x00\x04W\x00\x00\x02\x92\x00\x00\x00\x00\x00\x00\x00\x00\x07\x80\x00\x00\x03)\x00\x00\x01u\x00\x00\x04W\x00\x00\x02\x92', 'solver_index': 2, '__version__': 2}</properties>
+		<properties node_id="9" format="literal">{'auto_save': True, 'controlAreaVisible': True, 'filter': 'Pickled model (*.pkcls)', 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x03M\x00\x00\x01\xb5\x00\x00\x04\x83\x00\x00\x025\x00\x00\x03N\x00\x00\x01\xd4\x00\x00\x04\x82\x00\x00\x024\x00\x00\x00\x00\x00\x00\x00\x00\x07\x80\x00\x00\x03N\x00\x00\x01\xd4\x00\x00\x04\x82\x00\x00\x024', 'stored_name': 'Modelo_detectar idade.pkcls', 'stored_path': '.', '__version__': 1}</properties>
+		<properties node_id="10" format="literal">{'controlAreaVisible': True, 'currentScriptIndex': 0, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\xff\xff\xff\xff\xff\xff\xff\xf8\x00\x00\x07\x80\x00\x00\x04\x08\x00\x00\x020\x00\x00\x00\xd8\x00\x00\x05P\x00\x00\x03/\x00\x00\x00\x00\x02\x00\x00\x00\x07\x80\x00\x00\x00\x00\x00\x00\x00\x17\x00\x00\x07\x7f\x00\x00\x04\x07', 'scriptLibrary': [{'name': 'Table from numpy', 'script': 'import os\nimport numpy as np\nimport cv2\n\nfrom Orange.data import Table, Domain, ContinuousVariable\n\n# --- AJUSTE ESTES DOIS CAMINHOS -----------------------------------------\nWORKSPACE_PATH   = "C:\\\\Users\\\\Aluno\\\\Downloads\\\\VOULEMBRAR\\\\Aula03\\\\Aula03"\nYUNET_MODEL_PATH = f"{WORKSPACE_PATH}\\\\face_detection_yunet_2023mar.onnx"\nSFACE_MODEL_PATH = f"{WORKSPACE_PATH}\\\\face_recognition_sface_2021dec.onnx"\n# -------------------------------------------------------------------------\n\nN_FEATURES = 128  # dimensão do embedding gerado pelo SFace\n\n# Identificador gravado em cada atributo gerado (var.attributes["embedder"]).\n# É essa tag que permite ao backend Flask identificar automaticamente,\n# só olhando o modelo (.pkcls), qual pipeline de embedding usar antes de\n# classificar uma imagem nova. Mantenha este valor sincronizado com\n# FACE_EMBEDDER_ID em classifier/embedder.py no projeto Flask.\nEMBEDDER_ID = "opencv_sface_v1"\n\nYUNET_INPUT_SIZE = (320, 320)   # tamanho usado internamente pelo detector\n\n# Datasets de rostos gerados/sintéticos costumam ter imagens já recortadas\n# bem justas no rosto (pouca margem) e pequenos artefatos de geração, o\n# que derruba a confiança do YuNet. Um threshold menor tolera isso melhor.\nYUNET_SCORE_THRESHOLD = 0.6\nYUNET_NMS_THRESHOLD = 0.3\nYUNET_TOP_K = 5000\n\n# Tamanho de entrada esperado pelo SFace para uma face já alinhada/recortada.\nSFACE_INPUT_SIZE = (112, 112)\n\n# Se True: quando o YuNet não detectar nenhum rosto (mesmo com padding),\n# assume que a imagem inteira já É o rosto (comum em datasets sintéticos\n# já pré-recortados) e gera o embedding direto da imagem, sem alinhamento.\nFALLBACK_FULL_IMAGE_AS_FACE = True\n\n# Proporção de borda adicionada na 2ª tentativa de detecção (dá "contexto"\n# extra ao redor de rostos que preenchem quase todo o quadro).\nPADDING_RATIO = 0.25\n\n\ndef _check_models_exist():\n    for path, label in (\n        (YUNET_MODEL_PATH, "YuNet"),\n        (SFACE_MODEL_PATH, "SFace"),\n    ):\n        if not os.path.isfile(path):\n            raise FileNotFoundError(\n                f"Modelo {label} não encontrado em \'{path}\'. Baixe o "\n                f"arquivo .onnx (veja instruções no topo do script) e "\n                f"ajuste o caminho correspondente."\n            )\n\n\ndef _create_detector_and_recognizer():\n    _check_models_exist()\n\n    detector = cv2.FaceDetectorYN.create(\n        YUNET_MODEL_PATH,\n        "",\n        YUNET_INPUT_SIZE,\n        YUNET_SCORE_THRESHOLD,\n        YUNET_NMS_THRESHOLD,\n        YUNET_TOP_K,\n    )\n    recognizer = cv2.FaceRecognizerSF.create(SFACE_MODEL_PATH, "")\n    return detector, recognizer\n\n\ndef _find_image_path_attr(domain):\n    """Localiza a variável meta que contém o caminho da imagem."""\n    for attr in domain.metas:\n        if attr.attributes.get("type") == "image":\n            return attr\n    for attr in domain.metas:\n        if attr.is_string:\n            return attr\n    raise ValueError(\n        "Não foi encontrada nenhuma coluna meta com o caminho da imagem "\n        "em \'in_data\'. Verifique se a tabela de entrada veio do widget "\n        "\'Import Images\' (ou equivalente)."\n    )\n\n\ndef _detect_largest_face(img, detector):\n    """Roda o YuNet na imagem e retorna a linha de detecção do maior rosto, ou None."""\n    h, w = img.shape[:2]\n    detector.setInputSize((w, h))\n    _, faces = detector.detect(img)\n\n    if faces is None or len(faces) == 0:\n        return None\n\n    if len(faces) &gt; 1:\n        # Mantém apenas o maior rosto (maior área do bounding box: w * h).\n        faces = faces[np.argsort(faces[:, 2] * faces[:, 3])[::-1]]\n\n    return faces[0]\n\n\ndef _extract_feature_vector(image_path, detector, recognizer):\n    """\n    Retorna um vetor numpy de 128 posições com o embedding do maior rosto\n    encontrado na imagem, ou None se nenhum rosto puder ser processado.\n\n    Estratégia em 3 tentativas (a 2ª e a 3ª existem especialmente para\n    lidar com datasets de rostos gerados/sintéticos, já pré-recortados):\n      1. Detecção normal na imagem original.\n      2. Detecção na imagem com uma borda extra (padding), que dá mais\n         "contexto" ao YuNet quando o rosto já preenche quase todo o quadro.\n      3. Fallback: assume que a imagem inteira já é o rosto (sem detecção/\n         alinhamento) e gera o embedding direto — útil quando o dataset é\n         formado só por recortes de rosto bem centralizados.\n    """\n    img = cv2.imread(f"{WORKSPACE_PATH}/dataset_age_groups/train/{image_path}")\n    if img is None:\n        print(f"[face_features] Falha ao abrir \'{image_path}\'.")\n        return None\n\n    # --- Tentativa 1: detecção normal -----------------------------------\n    face = _detect_largest_face(img, detector)\n    source_img = img\n\n    # --- Tentativa 2: detecção com padding -------------------------------\n    if face is None:\n        h, w = img.shape[:2]\n        pad_h, pad_w = int(h * PADDING_RATIO), int(w * PADDING_RATIO)\n        padded = cv2.copyMakeBorder(\n            img, pad_h, pad_h, pad_w, pad_w, cv2.BORDER_REFLECT101\n        )\n        face = _detect_largest_face(padded, detector)\n        if face is not None:\n            source_img = padded\n            print(f"[face_features] Rosto encontrado apenas com padding em: {image_path}")\n\n    if face is not None:\n        try:\n            aligned = recognizer.alignCrop(source_img, face)\n            feature = recognizer.feature(aligned)\n            return np.asarray(feature, dtype=float).flatten()\n        except Exception as exc:\n            print(f"[face_features] Falha ao gerar embedding para \'{image_path}\': {exc}")\n            return None\n\n    # --- Tentativa 3: fallback (imagem inteira como rosto) --------------\n    if not FALLBACK_FULL_IMAGE_AS_FACE:\n        print(f"[face_features] Nenhum rosto detectado em: {image_path}")\n        return None\n\n    print(\n        f"[face_features] YuNet não detectou rosto em \'{image_path}\'; "\n        f"usando a imagem inteira como fallback (comum em datasets já "\n        f"pré-recortados no rosto)."\n    )\n    try:\n        resized = cv2.resize(img, SFACE_INPUT_SIZE, interpolation=cv2.INTER_LINEAR)\n        feature = recognizer.feature(resized)\n        return np.asarray(feature, dtype=float).flatten()\n    except Exception as exc:\n        print(f"[face_features] Fallback também falhou para \'{image_path}\': {exc}")\n        return None\n\n\ndef extract_features(data: Table) -&gt; Table:\n    """Gera a Table de saída com os vetores de características faciais."""\n    path_attr = _find_image_path_attr(data.domain)\n    detector, recognizer = _create_detector_and_recognizer()\n\n    feature_vars = []\n    for i in range(N_FEATURES):\n        var = ContinuousVariable(f"face_feature_{i}")\n        # Tag persistida no domínio (sobrevive ao pickle do .pkcls) para\n        # que o backend identifique automaticamente o embedder correto.\n        var.attributes["embedder"] = EMBEDDER_ID\n        feature_vars.append(var)\n    new_domain = Domain(\n        feature_vars,\n        class_vars=data.domain.class_vars,\n        metas=data.domain.metas,\n    )\n\n    rows = []\n    skipped = 0\n\n    for inst in data:\n        image_path = str(inst[path_attr])\n        vector = _extract_feature_vector(image_path, detector, recognizer)\n\n        if vector is None:\n            skipped += 1\n            continue\n\n        row = (\n            list(vector)\n            + [inst[cv_] for cv_ in data.domain.class_vars]\n            + [inst[m] for m in data.domain.metas]\n        )\n        rows.append(row)\n\n    if not rows:\n        print("[face_features] Nenhuma imagem produziu um vetor válido.")\n        return Table.from_domain(new_domain, n_rows=0)\n\n    out = Table.from_list(new_domain, rows)\n\n    print(\n        f"[face_features] {len(rows)} imagem(ns) processada(s) com sucesso, "\n        f"{skipped} ignorada(s) por falta de rosto detectado."\n    )\n    return out\n\n\n# --- Ponto de entrada usado pelo widget "Python Script" -----------------\nif "in_data" in globals() and in_data is not None:\n    out_data = extract_features(in_data)\nelse:\n    out_data = None\n    print("[face_features] Nenhum dado de entrada conectado (in_data é None).")', 'filename': None}], 'scriptText': 'import os\nimport numpy as np\nimport cv2\n\nfrom Orange.data import Table, Domain, ContinuousVariable\n\n# --- AJUSTE ESTES DOIS CAMINHOS -----------------------------------------\nWORKSPACE_PATH   = "C:\\\\Users\\\\Aluno\\\\Downloads\\\\VOULEMBRAR\\\\Aula03\\\\Aula03"\nYUNET_MODEL_PATH = f"{WORKSPACE_PATH}\\\\face_detection_yunet_2023mar.onnx"\nSFACE_MODEL_PATH = f"{WORKSPACE_PATH}\\\\face_recognition_sface_2021dec.onnx"\n# -------------------------------------------------------------------------\n\nN_FEATURES = 128  # dimensão do embedding gerado pelo SFace\n\n# Identificador gravado em cada atributo gerado (var.attributes["embedder"]).\n# É essa tag que permite ao backend Flask identificar automaticamente,\n# só olhando o modelo (.pkcls), qual pipeline de embedding usar antes de\n# classificar uma imagem nova. Mantenha este valor sincronizado com\n# FACE_EMBEDDER_ID em classifier/embedder.py no projeto Flask.\nEMBEDDER_ID = "opencv_sface_v1"\n\nYUNET_INPUT_SIZE = (320, 320)   # tamanho usado internamente pelo detector\n\n# Datasets de rostos gerados/sintéticos costumam ter imagens já recortadas\n# bem justas no rosto (pouca margem) e pequenos artefatos de geração, o\n# que derruba a confiança do YuNet. Um threshold menor tolera isso melhor.\nYUNET_SCORE_THRESHOLD = 0.6\nYUNET_NMS_THRESHOLD = 0.3\nYUNET_TOP_K = 5000\n\n# Tamanho de entrada esperado pelo SFace para uma face já alinhada/recortada.\nSFACE_INPUT_SIZE = (112, 112)\n\n# Se True: quando o YuNet não detectar nenhum rosto (mesmo com padding),\n# assume que a imagem inteira já É o rosto (comum em datasets sintéticos\n# já pré-recortados) e gera o embedding direto da imagem, sem alinhamento.\nFALLBACK_FULL_IMAGE_AS_FACE = True\n\n# Proporção de borda adicionada na 2ª tentativa de detecção (dá "contexto"\n# extra ao redor de rostos que preenchem quase todo o quadro).\nPADDING_RATIO = 0.25\n\n\ndef _check_models_exist():\n    for path, label in (\n        (YUNET_MODEL_PATH, "YuNet"),\n        (SFACE_MODEL_PATH, "SFace"),\n    ):\n        if not os.path.isfile(path):\n            raise FileNotFoundError(\n                f"Modelo {label} não encontrado em \'{path}\'. Baixe o "\n                f"arquivo .onnx (veja instruções no topo do script) e "\n                f"ajuste o caminho correspondente."\n            )\n\n\ndef _create_detector_and_recognizer():\n    _check_models_exist()\n\n    detector = cv2.FaceDetectorYN.create(\n        YUNET_MODEL_PATH,\n        "",\n        YUNET_INPUT_SIZE,\n        YUNET_SCORE_THRESHOLD,\n        YUNET_NMS_THRESHOLD,\n        YUNET_TOP_K,\n    )\n    recognizer = cv2.FaceRecognizerSF.create(SFACE_MODEL_PATH, "")\n    return detector, recognizer\n\n\ndef _find_image_path_attr(domain):\n    """Localiza a variável meta que contém o caminho da imagem."""\n    for attr in domain.metas:\n        if attr.attributes.get("type") == "image":\n            return attr\n    for attr in domain.metas:\n        if attr.is_string:\n            return attr\n    raise ValueError(\n        "Não foi encontrada nenhuma coluna meta com o caminho da imagem "\n        "em \'in_data\'. Verifique se a tabela de entrada veio do widget "\n        "\'Import Images\' (ou equivalente)."\n    )\n\n\ndef _detect_largest_face(img, detector):\n    """Roda o YuNet na imagem e retorna a linha de detecção do maior rosto, ou None."""\n    h, w = img.shape[:2]\n    detector.setInputSize((w, h))\n    _, faces = detector.detect(img)\n\n    if faces is None or len(faces) == 0:\n        return None\n\n    if len(faces) &gt; 1:\n        # Mantém apenas o maior rosto (maior área do bounding box: w * h).\n        faces = faces[np.argsort(faces[:, 2] * faces[:, 3])[::-1]]\n\n    return faces[0]\n\n\ndef _extract_feature_vector(image_path, detector, recognizer):\n    """\n    Retorna um vetor numpy de 128 posições com o embedding do maior rosto\n    encontrado na imagem, ou None se nenhum rosto puder ser processado.\n\n    Estratégia em 3 tentativas (a 2ª e a 3ª existem especialmente para\n    lidar com datasets de rostos gerados/sintéticos, já pré-recortados):\n      1. Detecção normal na imagem original.\n      2. Detecção na imagem com uma borda extra (padding), que dá mais\n         "contexto" ao YuNet quando o rosto já preenche quase todo o quadro.\n      3. Fallback: assume que a imagem inteira já é o rosto (sem detecção/\n         alinhamento) e gera o embedding direto — útil quando o dataset é\n         formado só por recortes de rosto bem centralizados.\n    """\n    img = cv2.imread(f"{WORKSPACE_PATH}/dataset_age_groups/train/{image_path}")\n    if img is None:\n        print(f"[face_features] Falha ao abrir \'{image_path}\'.")\n        return None\n\n    # --- Tentativa 1: detecção normal -----------------------------------\n    face = _detect_largest_face(img, detector)\n    source_img = img\n\n    # --- Tentativa 2: detecção com padding -------------------------------\n    if face is None:\n        h, w = img.shape[:2]\n        pad_h, pad_w = int(h * PADDING_RATIO), int(w * PADDING_RATIO)\n        padded = cv2.copyMakeBorder(\n            img, pad_h, pad_h, pad_w, pad_w, cv2.BORDER_REFLECT101\n        )\n        face = _detect_largest_face(padded, detector)\n        if face is not None:\n            source_img = padded\n            print(f"[face_features] Rosto encontrado apenas com padding em: {image_path}")\n\n    if face is not None:\n        try:\n            aligned = recognizer.alignCrop(source_img, face)\n            feature = recognizer.feature(aligned)\n            return np.asarray(feature, dtype=float).flatten()\n        except Exception as exc:\n            print(f"[face_features] Falha ao gerar embedding para \'{image_path}\': {exc}")\n            return None\n\n    # --- Tentativa 3: fallback (imagem inteira como rosto) --------------\n    if not FALLBACK_FULL_IMAGE_AS_FACE:\n        print(f"[face_features] Nenhum rosto detectado em: {image_path}")\n        return None\n\n    print(\n        f"[face_features] YuNet não detectou rosto em \'{image_path}\'; "\n        f"usando a imagem inteira como fallback (comum em datasets já "\n        f"pré-recortados no rosto)."\n    )\n    try:\n        resized = cv2.resize(img, SFACE_INPUT_SIZE, interpolation=cv2.INTER_LINEAR)\n        feature = recognizer.feature(resized)\n        return np.asarray(feature, dtype=float).flatten()\n    except Exception as exc:\n        print(f"[face_features] Fallback também falhou para \'{image_path}\': {exc}")\n        return None\n\n\ndef extract_features(data: Table) -&gt; Table:\n    """Gera a Table de saída com os vetores de características faciais."""\n    path_attr = _find_image_path_attr(data.domain)\n    detector, recognizer = _create_detector_and_recognizer()\n\n    feature_vars = []\n    for i in range(N_FEATURES):\n        var = ContinuousVariable(f"face_feature_{i}")\n        # Tag persistida no domínio (sobrevive ao pickle do .pkcls) para\n        # que o backend identifique automaticamente o embedder correto.\n        var.attributes["embedder"] = EMBEDDER_ID\n        feature_vars.append(var)\n    new_domain = Domain(\n        feature_vars,\n        class_vars=data.domain.class_vars,\n        metas=data.domain.metas,\n    )\n\n    rows = []\n    skipped = 0\n\n    for inst in data:\n        image_path = str(inst[path_attr])\n        vector = _extract_feature_vector(image_path, detector, recognizer)\n\n        if vector is None:\n            skipped += 1\n            continue\n\n        row = (\n            list(vector)\n            + [inst[cv_] for cv_ in data.domain.class_vars]\n            + [inst[m] for m in data.domain.metas]\n        )\n        rows.append(row)\n\n    if not rows:\n        print("[face_features] Nenhuma imagem produziu um vetor válido.")\n        return Table.from_domain(new_domain, n_rows=0)\n\n    out = Table.from_list(new_domain, rows)\n\n    print(\n        f"[face_features] {len(rows)} imagem(ns) processada(s) com sucesso, "\n        f"{skipped} ignorada(s) por falta de rosto detectado."\n    )\n    return out\n\n\n# --- Ponto de entrada usado pelo widget "Python Script" -----------------\nif "in_data" in globals() and in_data is not None:\n    out_data = extract_features(in_data)\nelse:\n    out_data = None\n    print("[face_features] Nenhum dado de entrada conectado (in_data é None).")', 'splitterState': b'\x00\x00\x00\xff\x00\x00\x00\x01\x00\x00\x00\x02\x00\x00\x00\x9f\x00\x00\x00`\x01\xff\xff\xff\xff\x01\x00\x00\x00\x02\x00', 'vimModeEnabled': False, '__version__': 2}</properties>
+		<properties node_id="11" format="literal">{'comparison_criterion': 0, 'controlAreaVisible': True, 'cv_stratified': True, 'n_folds': 2, 'n_repeats': 3, 'resampling': 0, 'rope': 0.1, 'sample_size': 9, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x029\x00\x00\x00\xeb\x00\x00\x05F\x00\x00\x02\xfe\x00\x00\x02:\x00\x00\x01\n\x00\x00\x05E\x00\x00\x02\xfd\x00\x00\x00\x00\x00\x00\x00\x00\x07\x80\x00\x00\x02:\x00\x00\x01\n\x00\x00\x05E\x00\x00\x02\xfd', 'shuffle_stratified': True, 'use_rope': False, 'score_table': {'show_score_hints': {'Model_': True, 'Train_': False, 'Test_': False, 'CA': True, 'PrecisionRecallFSupport': True, 'TargetScore': True, 'Precision': True, 'Recall': True, 'F1': True, 'AUC': True, 'LogLoss': False, 'Specificity': False, 'MatthewsCorrCoefficient': True, 'MSE': True, 'RMSE': True, 'MAE': True, 'MAPE': True, 'SMAPE': True, 'R2': True, 'CVRMSE': False, 'ClusteringScore': True, 'Silhouette': True, 'AdjustedMutualInfoScore': True}}, '__version__': 4, 'context_settings': []}</properties>
+		<properties node_id="12" format="pickle">gASVOwEAAAAAAAB9lCiMEmFwcGVuZF9wcmVkaWN0aW9uc5SIjBRhcHBlbmRfcHJvYmFiaWxpdGll
+c5SJjAphdXRvY29tbWl0lIiMEmNvbnRyb2xBcmVhVmlzaWJsZZSIjBNzYXZlZFdpZGdldEdlb21l
+dHJ5lENCAdnQywADAAAAAAJIAAABOwAABTcAAAKuAAACSQAAAVoAAAU2AAACrQAAAAAAAAAAB4AA
+AAJJAAABWgAABTYAAAKtlIwQc2VsZWN0ZWRfbGVhcm5lcpSMB2NvcHlyZWeUjA5fcmVjb25zdHJ1
+Y3RvcpSTlIwIYnVpbHRpbnOUjARsaXN0lJOUaA0ph5RSlEsAYYwRc2VsZWN0ZWRfcXVhbnRpdHmU
+SwCMC19fdmVyc2lvbl9flEsBjBBjb250ZXh0X3NldHRpbmdzlF2UdS4=
+</properties>
+		<properties node_id="13" format="literal">{'C_index': 61, 'auto_apply': True, 'class_weight': False, 'controlAreaVisible': True, 'learner_name': '', 'penalty_type': 1, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x03T\x00\x00\x01e\x00\x00\x04+\x00\x00\x02\x85\x00\x00\x03U\x00\x00\x01\x84\x00\x00\x04*\x00\x00\x02\x84\x00\x00\x00\x00\x00\x00\x00\x00\x07\x80\x00\x00\x03U\x00\x00\x01\x84\x00\x00\x04*\x00\x00\x02\x84', '__version__': 2}</properties>
+		<properties node_id="14" format="literal">{'C': 1.0, 'auto_apply': True, 'coef0': 1.0, 'controlAreaVisible': True, 'degree': 3, 'epsilon': 0.1, 'gamma': 0.0, 'kernel_type': 2, 'learner_name': '', 'limit_iter': True, 'max_iter': 100, 'nu': 0.5, 'nu_C': 1.0, 'savedWidgetGeometry': None, 'svm_type': 0, 'tol': 0.001, '__version__': 2}</properties>
+		<properties node_id="15" format="literal">{'activation_index': 3, 'alpha_index': 1, 'auto_apply': True, 'controlAreaVisible': True, 'hidden_layers_input': '100,', 'learner_name': '', 'max_iterations': 200, 'replicable': True, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x03(\x00\x00\x01V\x00\x00\x04X\x00\x00\x02\x93\x00\x00\x03)\x00\x00\x01u\x00\x00\x04W\x00\x00\x02\x92\x00\x00\x00\x00\x00\x00\x00\x00\x07\x80\x00\x00\x03)\x00\x00\x01u\x00\x00\x04W\x00\x00\x02\x92', 'solver_index': 2, '__version__': 2}</properties>
+	</node_properties>
+	<session_state>
+		<window_groups />
+	</session_state>
+</scheme>
